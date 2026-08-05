@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<!--
+  TODO לפני עלייה לאוויר — להחליף את כל המקומות המסומנים כך:
+  {{PURCHASE_LINK_INTRO}}         -> קישור רכישה למסלול ההיכרות (4 מפגשים)
+  {{PURCHASE_LINK_SUBSCRIPTION}}  -> קישור רכישה למנוי החודשי
+  {{WHATSAPP_LINK}}               -> קישור וואטסאפ, למשל https://wa.me/9725XXXXXXXX
+  {{WEBSITE_LINK}}                -> דומיין האתר של הברדקיה
+  {{INSTAGRAM_LINK}}              -> קישור לאינסטגרם של הברדקיה
+
+  צבעים/פונטים: כל המשתנים מרוכזים ב-:root בתחילת ה-<style>.
+  ברגע שיגיע ברנד בוק ויזואלי — משנים רק שם, וכל הדף מתעדכן.
+-->
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>גן עם אמא בייביז | דרך של אמא ותינוק — הברדקיה</title>
+<meta name="description" content="מרחב קבוע שבו גם את וגם התינוק שלך מקבלים ליווי, כלים, קהילה ומעטפת – במקום אחד. עם נטלי דהן, הברדקיה.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;600;700&family=Assistant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+  :root{
+    /* ---- פלטת ברירת מחדל זמנית — להחליף כשיגיע הברנד בוק ---- */
+    --brand-bg:        #FBF7F2;
+    --brand-bg-alt:    #F3EAE1;
+    --brand-ink:       #3A332E;
+    --brand-ink-soft:  #6B6259;
+    --brand-primary:   #B8826A;
+    --brand-primary-dark: #9E6C56;
+    --brand-accent:    #8B9A82;
+    --brand-card:      #FFFFFF;
+    --brand-border:    #E7DDD1;
+
+    --font-display: 'Frank Ruhl Libre', serif;
+    --font-body: 'Assistant', sans-serif;
+  }
+
+  html{ scroll-behavior: smooth; }
+  body{
+    background: var(--brand-bg);
+    color: var(--brand-ink);
+    font-family: var(--font-body);
+  }
+  h1,h2,h3,.font-display{ font-family: var(--font-display); }
+
+  .fade-up{
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity .8s ease, transform .8s ease;
+  }
+  .fade-up.is-visible{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .btn-primary{
+    background: var(--brand-primary);
+    color: #fff;
+    transition: background .25s ease, transform .25s ease;
+  }
+  .btn-primary:hover{ background: var(--brand-primary-dark); transform: translateY(-1px); }
+
+  .btn-outline{
+    border: 1px solid var(--brand-primary);
+    color: var(--brand-primary);
+    transition: background .25s ease, color .25s ease;
+  }
+  .btn-outline:hover{ background: var(--brand-primary); color:#fff; }
+
+  ::selection{ background: var(--brand-accent); color:#fff; }
+</style>
+</head>
+
+<body class="antialiased">
+
+<!-- HEADER -->
+<header class="w-full py-5 px-6 md:px-12 flex items-center justify-between">
+  <span class="font-display text-lg md:text-xl tracking-wide" style="color:var(--brand-ink)">הברדקיה</span>
+  <nav class="hidden md:flex items-center gap-6 text-sm" style="color:var(--brand-ink-soft)">
+    <a href="{{WEBSITE_LINK}}" class="hover:opacity-70 transition">האתר שלנו</a>
+    <a href="{{INSTAGRAM_LINK}}" class="hover:opacity-70 transition">אינסטגרם</a>
+    <a href="{{WHATSAPP_LINK}}" class="hover:opacity-70 transition">וואטסאפ</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="px-6 md:px-12 pt-10 pb-20 md:pt-16 md:pb-28 max-w-4xl mx-auto text-center">
+    <p class="fade-up text-sm md:text-base tracking-wide mb-4" style="color:var(--brand-primary)">דרך של אמא ותינוק</p>
+    <h1 class="fade-up font-display text-4xl md:text-6xl leading-tight mb-6">גן עם אמא בייביז</h1>
+    <p class="fade-up font-display text-xl md:text-2xl leading-relaxed mb-8" style="color:var(--brand-ink)">
+      כי גם התינוק שלך צריך מקום להתפתח.<br>וגם את.
+    </p>
+    <p class="fade-up text-base md:text-lg leading-loose max-w-2xl mx-auto mb-10" style="color:var(--brand-ink-soft)">
+      החודשים הראשונים עם תינוק מלאים ברגעים קסומים, אבל גם בשאלות, התלבטויות, עומס ולעיתים אפילו תחושת בדידות.
+      איך אני יודעת שהוא מתפתח כמו שצריך? אני עושה מספיק? למי בכלל מתייעצים?
+      ואיפה מוצאים אמהות שנמצאות בדיוק בשלב שאני נמצאת בו?
+    </p>
+    <a href="#הרשמה" class="fade-up btn-primary inline-block px-8 py-4 rounded-full text-base md:text-lg">
+      אני רוצה להצטרף למחזור הראשון
+    </a>
+    <p class="fade-up text-sm mt-6" style="color:var(--brand-ink-soft)">פתיחה 6.10 · ימי שלישי · לתינוקות בני 6–9 חודשים</p>
+  </section>
+
+  <!-- הכאב וההסבר -->
+  <section class="px-6 md:px-12 py-16 md:py-24" style="background:var(--brand-bg-alt)">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="fade-up text-lg md:text-xl leading-loose">
+        מתוך ההבנה הזו נולד <strong class="font-display">גן עם אמא בייביז</strong>.
+      </p>
+      <p class="fade-up text-lg md:text-xl leading-loose mt-4" style="color:var(--brand-ink-soft)">
+        לא עוד פעילות שבועית. לא עוד חוג.
+      </p>
+      <p class="fade-up font-display text-2xl md:text-3xl leading-relaxed mt-6">
+        מרחב קבוע שבו גם את וגם התינוק שלך מקבלים ליווי, כלים, קהילה ומעטפת – במקום אחד.
+      </p>
+    </div>
+  </section>
+
+  <!-- מה התינוק מקבל -->
+  <section class="px-6 md:px-12 py-16 md:py-24">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="fade-up font-display text-3xl md:text-4xl mb-8 text-center">מה התינוק שלך מקבל?</h2>
+      <p class="fade-up text-lg leading-loose text-center" style="color:var(--brand-ink-soft)">
+        בכל שבוע התינוקות נהנים מפעילות התפתחותית המותאמת בדיוק לשלב שבו הם נמצאים.
+      </p>
+      <p class="fade-up text-lg leading-loose text-center mt-4">אבל זה הרבה מעבר לפעילות.</p>
+      <p class="fade-up text-lg leading-loose text-center mt-4" style="color:var(--brand-ink-soft)">
+        בכל מפגש נטלי פוגשת שוב את אותו התינוק, מכירה אותו, עוקבת אחר ההתקדמות שלו, מזהה את החוזקות,
+        שמה לב למה שניתן לקדם, ומעניקה לך כלים פשוטים שתוכלי להמשיך ליישם גם בבית.
+      </p>
+      <p class="fade-up font-display text-2xl text-center mt-8">זה לא מפגש חד-פעמי. זה תהליך של ליווי אמיתי.</p>
+    </div>
+  </section>
+
+  <!-- מה את מקבלת -->
+  <section class="px-6 md:px-12 py-16 md:py-24" style="background:var(--brand-bg-alt)">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="fade-up font-display text-3xl md:text-4xl mb-8 text-center">ומה את מקבלת?</h2>
+      <p class="fade-up text-lg leading-loose text-center">מרחב שבו אפשר לנשום.</p>
+      <p class="fade-up text-lg leading-loose text-center mt-3" style="color:var(--brand-ink-soft)">
+        מקום שבו אפשר לשאול, להתייעץ, לשתף ולהרגיש שמבינים אותך. בכל מפגש נקדיש זמן גם לך.
+      </p>
+      <p class="fade-up text-lg leading-loose text-center mt-6">
+        נדבר על נושאים שמעסיקים כמעט כל אמא, אבל לא תמיד מקבלים עליהם מקום:
+      </p>
+
+      <ul class="fade-up mt-8 max-w-md mx-auto space-y-3 text-lg" style="color:var(--brand-ink-soft)">
+        <li class="flex items-start gap-3"><span class="mt-3 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--brand-accent)"></span>רגשות אשם</li>
+        <li class="flex items-start gap-3"><span class="mt-3 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--brand-accent)"></span>עומס והצפה</li>
+        <li class="flex items-start gap-3"><span class="mt-3 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--brand-accent)"></span>השוואות לאמהות אחרות</li>
+        <li class="flex items-start gap-3"><span class="mt-3 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--brand-accent)"></span>חוסר ביטחון בהחלטות שלנו</li>
+        <li class="flex items-start gap-3"><span class="mt-3 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--brand-accent)"></span>איך שומרים גם על עצמנו בתוך ההורות</li>
+        <li class="flex items-start gap-3"><span class="mt-3 w-1.5 h-1.5 rounded-full shrink-0" style="background:var(--brand-accent)"></span>וכל מה שבאמת מעסיק אותך ביום-יום</li>
+      </ul>
+
+      <p class="fade-up text-lg leading-loose text-center mt-10">
+        כי אנחנו לא מאמינות שיש דרך אחת להיות אמא.
+      </p>
+      <p class="fade-up font-display text-2xl text-center mt-3">
+        אנחנו מאמינות שלכל משפחה יש את הדרך שלה, והמטרה שלנו היא לתת לך את הכלים למצוא את הדרך שמתאימה לכם.
+      </p>
+    </div>
+  </section>
+
+  <!-- נטלי -->
+  <section class="px-6 md:px-12 py-16 md:py-24">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="fade-up font-display text-3xl md:text-4xl mb-8 text-center">מי מלווה אתכן?</h2>
+      <p class="fade-up text-lg leading-loose text-center">
+        את גן עם אמא בייביז מובילה <strong class="font-display">נטלי דהן</strong>.
+      </p>
+      <p class="fade-up text-lg leading-loose text-center mt-3" style="color:var(--brand-ink-soft)">
+        מלווה התפתחותית, מטפלת בתנועה וספורט טיפולי לילדים, מורה ליוגה, מאמנת כושר – ואמא של רפאל חיים.
+      </p>
+      <p class="fade-up text-lg leading-loose text-center mt-6">
+        הייחוד של נטלי הוא היכולת לראות את התמונה השלמה. לא רק את שלבי ההתפתחות של התינוק,
+        אלא גם את הקשר ביניכם, את הצרכים שלך כאמא, ואת הדרך שבה אפשר לעזור לשניכם לגדול יחד.
+      </p>
+      <p class="fade-up text-lg leading-loose text-center mt-4" style="color:var(--brand-ink-soft)">
+        בכל שבוע היא מלווה את אותן המשפחות, מכירה את ההתקדמות של כל תינוק, ומעניקה יחס אישי, מקצועי ואמיתי.
+      </p>
+    </div>
+  </section>
+
+  <!-- למה גן עם אמא בייביז -->
+  <section class="px-6 md:px-12 py-16 md:py-24" style="background:var(--brand-bg-alt)">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="fade-up font-display text-3xl md:text-4xl mb-10 text-center">למה גן עם אמא בייביז?</h2>
+      <ul class="space-y-5">
+        <li class="fade-up flex items-start gap-4 text-lg">
+          <span class="mt-2.5 w-2 h-px shrink-0" style="background:var(--brand-primary); width:20px;"></span>
+          ליווי מקצועי מתמשך – ולא מפגש חד-פעמי
+        </li>
+        <li class="fade-up flex items-start gap-4 text-lg">
+          <span class="mt-2.5 w-2 h-px shrink-0" style="background:var(--brand-primary); width:20px;"></span>
+          פעילות התפתחותית מותאמת גיל
+        </li>
+        <li class="fade-up flex items-start gap-4 text-lg">
+          <span class="mt-2.5 w-2 h-px shrink-0" style="background:var(--brand-primary); width:20px;"></span>
+          כלים פרקטיים להמשך גם בבית
+        </li>
+        <li class="fade-up flex items-start gap-4 text-lg">
+          <span class="mt-2.5 w-2 h-px shrink-0" style="background:var(--brand-primary); width:20px;"></span>
+          קבוצה קטנה וקבועה שיוצרת קהילה אמיתית
+        </li>
+        <li class="fade-up flex items-start gap-4 text-lg">
+          <span class="mt-2.5 w-2 h-px shrink-0" style="background:var(--brand-primary); width:20px;"></span>
+          מקום בטוח לשאול, לשתף ולהרגיש שייכת
+        </li>
+        <li class="fade-up flex items-start gap-4 text-lg">
+          <span class="mt-2.5 w-2 h-px shrink-0" style="background:var(--brand-primary); width:20px;"></span>
+          קפה, נשנושים ואווירה נעימה – כי גם לך מגיע
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- פרטי המחזור -->
+  <section class="px-6 md:px-12 py-16 md:py-20">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="fade-up font-display text-3xl md:text-4xl mb-10">המחזור הראשון נפתח</h2>
+      <div class="fade-up grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
+        <div>
+          <p class="font-display text-2xl md:text-3xl">6.10</p>
+          <p class="text-sm mt-1" style="color:var(--brand-ink-soft)">תאריך פתיחה</p>
+        </div>
+        <div>
+          <p class="font-display text-2xl md:text-3xl">ימי שלישי</p>
+          <p class="text-sm mt-1" style="color:var(--brand-ink-soft)">תדירות</p>
+        </div>
+        <div>
+          <p class="font-display text-2xl md:text-3xl">09:30–12:30</p>
+          <p class="text-sm mt-1" style="color:var(--brand-ink-soft)">שעות</p>
+        </div>
+        <div>
+          <p class="font-display text-2xl md:text-3xl">6–9 חודשים</p>
+          <p class="text-sm mt-1" style="color:var(--brand-ink-soft)">קבוצת הגיל</p>
+        </div>
+      </div>
+      <p class="fade-up text-base mt-8 max-w-xl mx-auto" style="color:var(--brand-ink-soft)">
+        מספר המקומות מוגבל כדי לשמור על קבוצה אינטימית ולאפשר ליווי אישי לכל אמא ותינוק.
+      </p>
+    </div>
+  </section>
+
+  <!-- רכישה -->
+  <section id="הרשמה" class="px-6 md:px-12 py-16 md:py-24" style="background:var(--brand-bg-alt)">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="fade-up font-display text-3xl md:text-4xl mb-4 text-center">בואי להכיר אותנו</h2>
+      <p class="fade-up text-lg leading-loose text-center max-w-2xl mx-auto mb-14" style="color:var(--brand-ink-soft)">
+        אפשר להתחיל במסלול היכרות של 4 מפגשים, שיאפשר לך להרגיש את הקבוצה, להכיר את נטלי,
+        לחוות את הליווי המקצועי ולהבין אם זה המקום הנכון עבורך ועבור התינוק שלך —
+        ולהמשיך משם למנוי הקבוע.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+
+        <!-- כרטיס 1: מסלול היכרות -->
+        <div class="fade-up rounded-3xl p-8 md:p-10 flex flex-col" style="background:var(--brand-card); border:1px solid var(--brand-border)">
+          <p class="text-sm tracking-wide mb-2" style="color:var(--brand-primary)">נקודת ההתחלה</p>
+          <h3 class="font-display text-2xl md:text-3xl mb-1">מסלול היכרות</h3>
+          <p class="text-sm mb-6" style="color:var(--brand-ink-soft)">4 מפגשים</p>
+          <p class="font-display text-4xl mb-6">₪480</p>
+          <ul class="space-y-3 text-base mb-8 flex-1" style="color:var(--brand-ink-soft)">
+            <li class="flex items-start gap-3"><span class="mt-2.5 shrink-0" style="width:14px;height:1px;background:var(--brand-primary)"></span>4 מפגשים שבועיים, מלאים בליווי אמיתי</li>
+            <li class="flex items-start gap-3"><span class="mt-2.5 shrink-0" style="width:14px;height:1px;background:var(--brand-primary)"></span>ניתן לממש במשך עד חודש וחצי מהרכישה</li>
+            <li class="flex items-start gap-3"><span class="mt-2.5 shrink-0" style="width:14px;height:1px;background:var(--brand-primary)"></span>עד שני מפגשים ניתנים להשלמה במקרה של היעדרות</li>
+            <li class="flex items-start gap-3"><span class="mt-2.5 shrink-0" style="width:14px;height:1px;background:var(--brand-primary)"></span>הדרך הכי טובה להתחיל, בלי להתחייב מראש לחוג</li>
+          </ul>
+          <a href="{{PURCHASE_LINK_INTRO}}" class="btn-primary text-center px-6 py-4 rounded-full">אני רוצה להצטרף למסלול ההיכרות</a>
+        </div>
+
+        <!-- כרטיס 2: מנוי חודשי -->
+        <div class="fade-up rounded-3xl p-8 md:p-10 flex flex-col relative" style="background:var(--brand-card); border:1px solid var(--brand-border)">
+          <p class="text-sm tracking-wide mb-2" style="color:var(--brand-accent)">ההמשך הטבעי</p>
+          <h3 class="font-display text-2xl md:text-3xl mb-1">מנוי חודשי</h3>
+          <p class="text-sm mb-6" style="color:var(--brand-ink-soft)">מפגש שבועי קבוע</p>
+          <p class="font-display text-4xl mb-6">₪520<span class="text-lg" style="color:var(--brand-ink-soft)"> / לחודש</span></p>
+          <ul class="space-y-3 text-base mb-8 flex-1" style="color:var(--brand-ink-soft)">
+            <li class="flex items-start gap-3"><span class="mt-2.5 shrink-0" style="width:14px;height:1px;background:var(--brand-accent)"></span>מפגש שבועי קבוע לאורך כל החודש</li>
+            <li class="flex items-start gap-3"><span class="mt-2.5 shrink-0" style="width:14px;height:1px;background:var(--brand-accent)"></span>כניסה חופשית למשחקייה, א'–ה', 09:00–13:00</li>
+            <li class="flex items-start gap-3"><span class="mt-2.5 shrink-0" style="width:14px;height:1px;background:var(--brand-accent)"></span>כל ההטבות הנלוות</li>
+            <li class="flex items-start gap-3"><span class="mt-2.5 shrink-0" style="width:14px;height:1px;background:var(--brand-accent)"></span>קבוצה קבועה שגדלה יחד לאורך זמן</li>
+          </ul>
+          <a href="{{PURCHASE_LINK_SUBSCRIPTION}}" class="btn-outline text-center px-6 py-4 rounded-full">אני רוצה להצטרף למנוי החודשי</a>
+        </div>
+
+      </div>
+
+      <p class="fade-up text-center text-base mt-10" style="color:var(--brand-ink-soft)">
+        יש שאלות לפני שמתחילות? <a href="{{WHATSAPP_LINK}}" class="underline" style="color:var(--brand-primary)">אפשר לכתוב לנו בוואטסאפ</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="px-6 md:px-12 py-16 md:py-24">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="fade-up font-display text-3xl md:text-4xl mb-10 text-center">שאלות שכדאי לענות עליהן מראש</h2>
+      <div class="space-y-8">
+        <div class="fade-up">
+          <p class="font-display text-xl mb-2">מה קורה אם אני מפספסת מפגש?</p>
+          <p class="text-base leading-loose" style="color:var(--brand-ink-soft)">במסלול ההיכרות אפשר להשלים עד שני מפגשים במסגרת תקופת המימוש. פרטי ההשלמה במנוי החודשי — נשמח לענות בוואטסאפ.</p>
+        </div>
+        <div class="fade-up">
+          <p class="font-display text-xl mb-2">מה ההבדל בין מסלול ההיכרות למנוי החודשי?</p>
+          <p class="text-base leading-loose" style="color:var(--brand-ink-soft)">מסלול ההיכרות הוא הדרך להתחיל, להכיר את נטלי ואת הקבוצה, בלי להתחייב לטווח ארוך. המנוי החודשי הוא ההמשך הטבעי, וכולל גם כניסה חופשית למשחקייה של הברדקיה.</p>
+        </div>
+        <div class="fade-up">
+          <p class="font-display text-xl mb-2">התינוק שלי לא בדיוק בגיל 6–9 חודשים — אפשר בכל זאת?</p>
+          <p class="text-base leading-loose" style="color:var(--brand-ink-soft)">הקבוצה הראשונה מיועדת לטווח הגילאים הזה כדי לשמור על התאמה התפתחותית אמיתית בין התינוקות. אם אתם קרובים לטווח, כתבו לנו בוואטסאפ ונשמח לבדוק יחד.</p>
+        </div>
+        <div class="fade-up">
+          <p class="font-display text-xl mb-2">מה חשוב להביא איתי למפגש?</p>
+          <p class="text-base leading-loose" style="color:var(--brand-ink-soft)">מספיק להגיע עם התינוק ובגדים נוחים לתנועה. את השאר — קפה, נשנושים ואווירה — אנחנו כבר דואגות לו.</p>
+        </div>
+        <div class="fade-up">
+          <p class="font-display text-xl mb-2">איך נרשמים בפועל?</p>
+          <p class="text-base leading-loose" style="color:var(--brand-ink-soft)">לוחצות על אחד הכפתורים למעלה, בוחרות מסלול היכרות או מנוי חודשי, ומשלימות רכישה מקוונת. יש שאלות לפני כן? אנחנו כאן בוואטסאפ.</p>
+        </div>
+      </div>
+      <p class="fade-up text-sm text-center mt-10" style="color:var(--brand-ink-soft)">* קטע ה-FAQ הוא טיוטה ראשונית — לעדכן/לאשר תשובות לפי הצורך.</p>
+    </div>
+  </section>
+
+  <!-- סגירה -->
+  <section class="px-6 md:px-12 py-20 md:py-28" style="background:var(--brand-bg-alt)">
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="fade-up font-display text-2xl md:text-3xl leading-relaxed mb-4">
+        לפעמים כל מה שאמא צריכה הוא מקום אחד שמבין גם אותה.
+      </p>
+      <p class="fade-up text-lg leading-loose mb-10" style="color:var(--brand-ink-soft)">
+        אם גם את מחפשת מרחב שייתן מענה להתפתחות של התינוק שלך, ובאותה נשימה גם יראה אותך,
+        יקשיב לך וילווה אותך – נשמח לפגוש אתכן.
+      </p>
+      <p class="fade-up font-display text-2xl mb-1">גן עם אמא בייביז</p>
+      <p class="fade-up text-base mb-8" style="color:var(--brand-ink-soft)">דרך של אמא ותינוק מתחילה כאן.</p>
+      <a href="#הרשמה" class="fade-up btn-primary inline-block px-8 py-4 rounded-full text-base md:text-lg">
+        אני רוצה להצטרף למחזור הראשון
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="px-6 md:px-12 py-10 border-t" style="border-color:var(--brand-border)">
+  <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm" style="color:var(--brand-ink-soft)">
+    <span>הברדקיה · גן עם אמא בייביז</span>
+    <div class="flex items-center gap-6">
+      <a href="{{WEBSITE_LINK}}" class="hover:opacity-70 transition">האתר שלנו</a>
+      <a href="{{INSTAGRAM_LINK}}" class="hover:opacity-70 transition">אינסטגרם</a>
+      <a href="{{WHATSAPP_LINK}}" class="hover:opacity-70 transition">וואטסאפ</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
